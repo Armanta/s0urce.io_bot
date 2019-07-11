@@ -34,8 +34,10 @@ def hacking():
                 continue
             print('[URL]{}'.format(img_url.get_attribute("src")))
             time.sleep(0.5)
-            envoyer = driver.find_element_by_id('tool-type-word').send_keys(find_word(img_url.get_attribute("src")),Keys.ENTER)
-            
+            try:
+                envoyer = driver.find_element_by_id('tool-type-word').send_keys(find_word(img_url.get_attribute("src")),Keys.ENTER)
+            except KeyError:
+                print("[+]Hacking Finished")
         except (TimeoutException,ElementNotInteractableException):
             print('Not found')
 
@@ -58,5 +60,7 @@ login_form = driver.find_element_by_id('login-input').send_keys( "Blowfish#6201"
 check_tuto = driver.find_element_by_id('checkbox-tutorial').click()
 login      = driver.find_element_by_id('login-play').click()
 hacking()
+
+
 
 
