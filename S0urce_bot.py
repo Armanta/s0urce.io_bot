@@ -1,3 +1,15 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+__author__ = "Blowfish, Ericuis"
+__copyright__ = "Copyright 2019, Polarised"
+__credits__ = ["Blowfish", "Ericuis"]
+
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Blowfish"
+
+
 from PIL import Image
 import io
 import requests
